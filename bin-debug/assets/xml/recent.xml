@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projects>
+    <project id="0">
+        <projectTitle>NY QUITS</projectTitle>
+        <projectSubTitle>DCF Advertising</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/MarieNYQuits.jpg</projectImg>
+        <projectFlv>assets/flv/MarieNYQuits.flv</projectFlv>
+        <projectMov>assetw/mov/MarieNYQuits.mov</projectMov>
+    </project>
+    
+    <project id="1">
+        <projectTitle>SesameStGreenVideo</projectTitle>
+        <projectSubTitle>SesameStGreenVideoC</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/SesameStGreenVideoC.jpg</projectImg>
+        <projectFlv>assets/flv/SesameStGreen.flv</projectFlv>
+        <projectMov>assetw/mov/SesameStGreenVideoC.mov</projectMov>
+    </project>
+    
+    <project id="2">
+        <projectTitle>Construction</projectTitle>
+        <projectSubTitle>Construction</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/ConstructionC.jpg</projectImg>
+        <projectFlv>assets/flv/Construction_LetterC_W.flv</projectFlv>
+        <projectMov>assetw/mov/Construction_LetterC_W2.mov</projectMov>
+    </project> 
+
+    <project id="3">
+        <projectTitle>Lovelyletter</projectTitle>
+        <projectSubTitle>Lovelyletter</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/LovelyLetterH.jpg</projectImg>
+        <projectFlv>assets/flv/LovelyLetterH.flv</projectFlv>
+        <projectMov>assetw/mov/LovelyH.mov</projectMov>
+    </project> 
+
+    <project id="4">
+        <projectTitle>NY77</projectTitle>
+        <projectSubTitle>NY77</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/NY77.jpg</projectImg>
+        <projectFlv>assets/flv/NY77_.flv</projectFlv>
+        <projectMov>assetw/mov/NY77_.mov</projectMov>
+    </project>
+    
+    <project id="5">
+        <projectTitle>SesameStSocks</projectTitle>
+        <projectSubTitle>SesameStSocks</projectSubTitle>
+        <projectText><![CDATA[A PSA for New York’s Department of Health, highlighting the tragic result of years of smoking by Marie, a Bronx resident.<p>Norman J was hired to art direct the interview and incorporate graphic elements to help illustrate Marie’s tragic journey.</p><p>Directed by Henry Corra <br>Art Direction/ Design Todd Neale <br>Agency: DCF Advertising]]></projectText>
+        <projectImg>assets/images/SesameStSocks.jpg</projectImg>
+        <projectFlv>assets/flv/SesameStSocks.flv</projectFlv>
+        <projectMov>assetw/mov/SesameStSocks.mov</projectMov>
+    </project>
+    
+    
+</projects>

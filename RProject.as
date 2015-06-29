@@ -1,0 +1,246 @@
+package
+{
+	
+	import caurina.transitions.Tweener;
+	import caurina.transitions.properties.ColorShortcuts;
+	
+	import flash.display.Bitmap;
+	import flash.display.MovieClip;
+	import flash.events.MouseEvent;
+	import flash.net.URLRequest;
+	import flash.net.navigateToURL;
+	import flash.text.AntiAliasType;
+	import flash.text.StyleSheet;
+	import flash.text.TextField;
+	import flash.text.TextFieldAutoSize;
+	import flash.text.TextFormat;
+	import flash.utils.Dictionary;
+	
+	public class RProject
+	{
+		private var _mclip:MovieClip = new MovieClip;
+		private var _tclip:MovieClip = new MovieClip;
+		private var _bgclip:MovieClip = new MovieClip;
+		
+		private var _txtDict:Dictionary = new Dictionary(true);
+		private var _id:Number;
+		
+		public function RProject(id_:Number)
+		{
+			ColorShortcuts.init();
+			_mclip.buttonMode = true;
+			_mclip.mouseChildren = true;
+			_mclip.extra = {
+				t_mc:_tclip,
+				bgclip:_bgclip,
+				_id:id_
+				
+			}
+		}
+
+		public function loadImage(bmp_:Bitmap):void
+		{
+			_mclip.addChild(bmp_);
+		} //endfunction
+		
+		public function createTitle(s_:String):void
+		{
+			var titleFormat:TextFormat = new TextFormat("Clarendon Lt BT");
+			titleFormat.color = 0x54fdff;    // Make the text color
+			titleFormat.size = 19;
+			var txt:TextField = new TextField;
+			txt.embedFonts = true;
+			txt.antiAliasType = AntiAliasType.ADVANCED;
+			txt.autoSize = TextFieldAutoSize.LEFT;
+			txt.border = false;
+			txt.selectable = false;
+			txt.text = s_.toUpperCase();
+			txt.setTextFormat(titleFormat);
+			txt.x = 0;
+			txt.y = -5;
+			_tclip.addChild(txt);
+			
+			_txtDict["title"] = txt;
+			
+		}
+		
+		public function createSubTitle(s_:String):void
+		{
+			var titleFormat:TextFormat = new TextFormat("Gotham-Medium");
+			titleFormat.color = 0x859d9d;    // Make the text color
+			titleFormat.size = 13;
+			var txt:TextField = new TextField;
+			txt.embedFonts = true;
+			txt.antiAliasType = AntiAliasType.ADVANCED;
+			txt.autoSize = TextFieldAutoSize.LEFT;
+			txt.border = false;
+			txt.selectable = false;
+			txt.text = s_;
+			txt.setTextFormat(titleFormat);
+			txt.x = 0;
+			txt.y = 25;
+			_tclip.addChild(txt);
+			
+			_txtDict["subtitle"] = txt;
+		}
+		
+		public function createText(s_:String):void
+		{
+			
+			var styles:StyleSheet = new StyleSheet();
+
+
+			styles.setStyle("a:link", {
+			   // color:'#54fdff',
+			    textDecoration:'underline'
+			});
+			styles.setStyle("a:hover", {
+				color:'#54fdff'
+			});
+
+			
+			
+			var titleFormat:TextFormat = new TextFormat("Gotham-Book");
+			titleFormat.color = 0x6b7e7f;    // Make the text color
+			titleFormat.size = 11;
+			titleFormat.leading = 3;
+			var txt:TextField = new TextField;
+			txt.width = Configuration.projectTextWidth;
+			titleFormat.letterSpacing = 0.5;
+			txt.embedFonts = true;
+			txt.antiAliasType = AntiAliasType.ADVANCED;	
+			txt.autoSize = TextFieldAutoSize.LEFT;
+			txt.wordWrap = true;
+			txt.border = false;
+			txt.selectable = false;
+			txt.multiline = true;
+			
+			txt.htmlText = s_;
+			txt.setTextFormat(titleFormat);
+			txt.styleSheet = styles;
+			txt.x = 0;
+			txt.y = 50;
+			_tclip.addChild(txt);
+			
+			_txtDict["text"] = txt;
+			
+		}
+		
+		public function createDownload(source:String):void
+		{
+			var titleFormat:TextFormat = new TextFormat("Gotham-Medium");
+			titleFormat.color = 0x6b7e7e;    // Make the text color
+			titleFormat.size = 10;
+			titleFormat.leading = 3;
+			var txt:TextField = new TextField;
+			txt.width = Configuration.projectTextWidth;
+			titleFormat.letterSpacing = 0.5;
+			txt.embedFonts = true;
+			txt.antiAliasType = AntiAliasType.ADVANCED;
+			txt.autoSize = TextFieldAutoSize.LEFT;
+			txt.wordWrap = false;
+			txt.border = false;
+			txt.selectable = false;
+			txt.text = "DOWNLOAD";
+			txt.setTextFormat(titleFormat);
+			txt.x = 0;
+			txt.y = _txtDict["text"].y + _txtDict["text"].height + 10;
+			_tclip.addChild(txt);
+			
+			var mc:MovieClip = new MovieClip();
+			mc.graphics.lineStyle(0,0x34383c,1);
+			mc.graphics.beginFill(0x34383c,1);
+			mc.graphics.drawRect(0,0,txt.width,txt.height);
+			mc.x = txt.x;
+			mc.y = txt.y;
+			mc.alpha = 0;
+			_tclip.addChild(mc);
+			mc.extra = 
+			{
+				url : source
+			}//end extra
+			mc.buttonMode = true;
+			_txtDict["download"] = txt;
+			
+			
+			mc.addEventListener(MouseEvent.MOUSE_OVER, onMouseOver);
+			mc.addEventListener(MouseEvent.MOUSE_OUT, onMouseOut);	
+			mc.addEventListener(MouseEvent.CLICK, onPress);	
+			
+			
+		}//endfunction
+		
+		
+		public function createMouseChecker():void
+		{
+			var mc:MovieClip = new MovieClip();
+			mc.graphics.lineStyle(0,0x34383c,1);
+			mc.graphics.beginFill(0x34383c,1);
+			mc.graphics.drawRect(0,0,_mclip.width*.8, _mclip.height );
+			mc.x = _mclip.x+_mclip.width;
+			mc.y = _mclip.y;
+			mc.alpha = 1;
+			_bgclip.addChild(mc);
+			
+			
+		}//endfunction
+	
+		
+				private function onMouseOver(e:MouseEvent):void
+		{
+			
+/* 			var titleFormat:TextFormat = new TextFormat("Gotham-Medium");
+			titleFormat.color = 0xffffff;    // Make the text color
+ 			_txtDict["download"].setTextFormat(titleFormat);
+*/
+			Tweener.addTween(_txtDict["download"], 
+				{
+				_color:0xffffff,
+                time:.3,
+                transition:"easeOutQuad"
+		     	}); //endtween
+			
+		}//endfunction
+		
+		private function onMouseOut(e:MouseEvent):void
+		{
+			/* var titleFormat:TextFormat = new TextFormat("Gotham-Medium");
+			titleFormat.color = 0x6b7e7e;    // Make the text color
+			_txtDict["download"].setTextFormat(titleFormat); */
+			
+			Tweener.addTween(_txtDict["download"], 
+				{
+				_color:0x6b7e7e,
+                time:.3,
+                transition:"easeOutQuad"
+		     	}); //endtween
+		     	
+		     	
+			
+		}//endfunction
+		
+		private function onPress(e:MouseEvent):void
+		{
+			navigateToURL(new URLRequest(e.target.extra.url), "_blank");		
+		}//endfunction
+		
+		
+		
+			
+		public function get bgclip():MovieClip
+		{
+			return _bgclip;
+		}//endfunction
+		
+		public function get mc():MovieClip
+		{
+			return _mclip;
+		}//endfunction
+		
+		public function get t_mc():MovieClip
+		{
+			return _tclip;
+		}//endfunction
+		
+	}
+}

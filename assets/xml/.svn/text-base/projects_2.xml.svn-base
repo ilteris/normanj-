@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<projects>
+	<project id='1'>
+		<projectTitle>NY77: Coolest Year in Hell</projectTitle>
+		<projectSubTitle>VH1</projectSubTitle>
+		<projectText>
+			<![CDATA[A VH1 Rock Documentary, Nominated for two 2008 Emmys:<br>Design & Art Direction<br>Outstanding Arts & Culture Programming<br><br><p><p> Executive Produced by Nanette Burstein & Jeremy Amar<br>Art Direction <A HREF="http://www.wyethhansen.com/"target="_blank">Wyeth Hansen.</A><br><p>Additional Graphics by <A HREF="http://www.amoebalabs.com/"target="_blank">David Ahuija.<<p><p> ]]>
+		</projectText>
+		<projectFlv>/assets/uploads/5/NY77_.flv</projectFlv>
+		<projectMov>/assets/uploads/5/NY77_.mov</projectMov>
+		<projectImg>/assets/uploads/5/NY77.jpg</projectImg>
+		<timestamp>2008-09-12 11:14:25</timestamp>
+		<position>1</position>
+	</project>
+	<project id='2'>
+		<projectTitle>Autobiography: Dennis Hopper</projectTitle>
+		<projectSubTitle>AMC Pilot</projectSubTitle>
+		<projectText>
+			<![CDATA[Pilot for AMC. Dennis Hopper narrates his life story. <br>Executive Produced by Nanette Burstin & Jeremy Amar<p><br><br><p><br><p>Art Direction <A HREF="http://www.wyethhansen.com/"target="_blank">Wyeth Hansen.</A><p><br><p><p>Additional Graphics by <A HREF="http://www.nextseason.net/"target="_blank">Evan Dennis.</A><p><p><p><p><p><br><p><p>Production through <A HREF="http://www.trollback.com/"target="_blank">Trollb�ck + Company.</A> ]]>
+		</projectText>
+		<projectFlv>/assets/uploads/19/Autobiography_Hopper.flv</projectFlv>
+		<projectMov>/assets/uploads/19/Autobiography_HopperC.mov</projectMov>
+		<projectImg>/assets/uploads/19/Hopper.jpg</projectImg>
+		<timestamp>2008-09-12 12:38:14</timestamp>
+		<position>2</position>
+</project>
+</projects>

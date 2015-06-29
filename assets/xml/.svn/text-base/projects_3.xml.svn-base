@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<projects>
+	<project id='0'>
+		<projectTitle>STOLEN</projectTitle>
+		<projectSubTitle>Norman J dot</projectSubTitle>
+		<projectText>
+			<![CDATA[Who the hell stole the dot of our "j"!? <p><br>Norman is not happy! ]]>
+		</projectText>
+		<projectFlv>/assets/uploads/20/NormyDoor02.2.flv</projectFlv>
+		<projectMov>/assets/uploads/20/NormyDoor02c3.mov</projectMov>
+		<projectImg>/assets/uploads/20/NormyDoor.jpg</projectImg>
+		<timestamp>2008-09-12 17:06:39</timestamp>
+		<position>0</position>
+	</project>
+	<project id='1'>
+		<projectTitle>Aussies for Obama</projectTitle>
+		<projectSubTitle>Yes We Can Mate!</projectSubTitle>
+		<projectText>
+			<![CDATA[<A HREF="http://www.barackobama.com/index.php">BARACKOBAMA.COM</A> ]]>
+		</projectText>
+		<projectFlv>/assets/uploads/21/AussiesforObama_6.flv</projectFlv>
+		<projectMov>/assets/uploads/21/AussiesforObama_6c.mov</projectMov>
+		<projectImg>/assets/uploads/21/AussiesforObama_6.jpg</projectImg>
+		<timestamp>2008-09-12 17:06:39</timestamp>
+		<position>1</position>
+</project>
+</projects>
